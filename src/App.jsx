@@ -12,7 +12,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  const fetchImages = useCallback(async () => {
+  const fetchImages = useCallback(async () => {        
     try {
       const { data } = await axios.get(
         `${API_URL}?query=${searchInput.current.value}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${process.env.REACT_APP_API_KEY}`
